@@ -38,8 +38,9 @@ def get_townhall_email(town_hall_url)
     p "No email found"
     exit
   end
+  
   town_hall_email.each do |email|
-    p email.text
+    return email.text
   end
 end
 
@@ -50,5 +51,3 @@ def get_all_townhall_emails
     get_townhall_email(town_url)
   end
 end
-
-get_all_townhall_emails
