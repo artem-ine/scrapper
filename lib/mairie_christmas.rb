@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
-require 'watir' # to load additional values if needed
 
 
 # get all the town names
