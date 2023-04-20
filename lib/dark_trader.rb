@@ -21,7 +21,7 @@ def get_currencies(doc)
     exit
   end
 # currencies.each do |currency|
-#   puts currency.text
+# puts currency.text
 # end  
 end
 
