@@ -46,7 +46,16 @@ end
 
 def get_all_townhall_emails
   town_urls = town_names
+  town_emails = {}
+
   town_urls.each do |town_url|
-    get_townhall_email(town_url)
+    town_name = town_url.split("/")[-1].gsub(".html", "").gsub("-", " ").capitalize # extract town name from url and format it
+    town_email = get_townhall_email(town_url)
+    town_emails[town_name] = town_email
   end
+
+  return town_emails
 end
+
+
+p get_all_townhall_emails
